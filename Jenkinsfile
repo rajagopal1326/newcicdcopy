@@ -31,10 +31,6 @@ post {
                mail to: 'rajagopalece94@gmail.com'
                subject: 'Build successfull',
                body: 'The Build is successfull',
-              
-              
-
-  
   }   
 }
 }              
