@@ -23,13 +23,21 @@ pipeline {
     }
     
   }
-
-
-
+post {
+   success {
+     emailtext subject: 'Build successfull',
+               body: 'The Build is successfull',
+               to: 'rajagopalece94@gmail.com'
+               attachlog: true
 }
-
-             
-              
+  failure {
+     emailtext subject: 'Build Failed',
+               body: 'The Build is Failed',
+               to: 'rajagopalece94@gmail.com'
+               attachlog: true 
+  }
+}
+}              
   
 
                  
