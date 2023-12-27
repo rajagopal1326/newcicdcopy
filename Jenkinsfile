@@ -24,18 +24,22 @@ pipeline {
     
   }
 post {
+   always {
+      sh 'docker rm -f mypycont'
+      sh 'docker run --mypycont -d -p 3000:5000 my-flask'
    success {
      emailtext subject: 'Build successfull',
                body: 'The Build is successfull',
                to: 'rajagopalece94@gmail.com'
-               attachlog: true
+              
 }
   failure {
      emailtext subject: 'Build Failed',
                body: 'The Build is Failed',
                to: 'rajagopalece94@gmail.com'
-               attachlog: true 
+           
   }
+  }   
 }
 }              
   
