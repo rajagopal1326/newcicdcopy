@@ -27,10 +27,11 @@ post {
    always {
       sh 'docker rm -f mypycont'
       sh 'docker run --mypycont -d -p 3000:5000 my-flask'
-   
-     emailtext subject: 'Build successfull',
+
+               mail to: 'rajagopalece94@gmail.com'
+               subject: 'Build successfull',
                body: 'The Build is successfull',
-               to: 'rajagopalece94@gmail.com'
+              
               
 
   
